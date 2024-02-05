@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block body %}
+
+{%load static%}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../static/img/carousel-bg-1.jpg);">
+        <div class="container-fluid page-header-inner py-5">
+            <div class="container text-center">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Demande</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a class="mod" href="{% url 'accueil' %}">Home</a></li>
+                        <li class="breadcrumb-item"><a class="mod" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Demande</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase">// Demande //</h6>
+                <h1 class="mb-5">Demande de dépannage!</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+<div class=" booking" data-wow-delay="0.1s">
+    <div class="col-lg-12"> #bg-primary
+        <div class="bg-primary text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+            <h1 class="text-white mb-4">Faire une demande de dépannage</h1>
+            <form action="#" method="post">
+
+                {% csrf_token %}
+                <h4 class="text-white">Information de la demande</h4>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Full_name type="text" class="form-control border-0" placeholder="Nom complet" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Statut_Demande type="text" class="form-control border-0" placeholder="Etat de la demande" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Description type="text" class="form-control" placeholder="Description" style="height: 70px;" %}
+                    </div>
+                        <h4 class="text-white">Information du véhicule</h4>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.marque type="text" class="form-control" placeholder="marque" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.modele type="text" class="form-control" placeholder="modele" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.puissance type="text" class="form-control" placeholder="puissance" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.energie type="text" class="form-control" placeholder="energie" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.matricule type="text" class="form-control" placeholder="matricule" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.kilometrage type="text" class="form-control" placeholder="kilometrage" style="height: 30px;" %}
+                    </div>
+                        <h4 class="text-white">Choix de la panne</h4>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.panne type="text" class="form-control" placeholder="votre panne" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Lieu_Panne type="text" class="form-control" placeholder="Lieu de la panne" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Date_Panne type="date" class="form-control" placeholder="Date de la panne" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% render_field form.Heure_Panne type="time" class="form-control" placeholder="Heure de la panne" style="height: 30px;" %}
+                    </div>
+                    <div class="col-12">
+                        <div>
+                            <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                            <label for="invalidCheck3">&nbsp;&nbsp;
+                                <a class="cal">
+                                    Accepter les termes et conditions
+                                </a>
+                            </label>
+                            <div>
+                                <a class="cal">
+                                    Vous devez être d'accord avant de soumettre.
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-12">
+                        <span class="spinner-border spinner-border-sm"></span>
+                        <button class="btn btn-secondary w-100 py-3" id="submit" name="submit" type="submit">Enregistrer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>  
+</div>
+<!-- Booking End -->
+        
+    {% endblock body %}

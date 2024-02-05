@@ -1,0 +1,406 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block body %}
+
+{%load static%}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/carousel-bg-1.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-10 col-lg-7 text-center text-lg-start">
+                                    <h6 class="text-white text-uppercase mb-3 animated slideInDown">//  ENTRETIEN AUTOMOBILE //</h6>
+                                    <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">Centre de service de réparation automobile qualifié</h1>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 animated slideInDown">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                    <img class="img-fluid" src="{% static 'img/carousel-1.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/carousel-bg-2.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <div class="col-10 col-lg-7 text-center text-lg-start">
+                                    <h6 class="text-white text-uppercase mb-3 animated slideInDown">//  ENTRETIEN AUTOMOBILE //</h6>
+                                    <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">Centre de service de lavage de voiture qualifié</h1>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 animated slideInDown">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                    <img class="img-fluid" src="{% static 'img/carousel-2.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex py-5 px-4">
+                        <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Maintenance</h5>
+                            <p>Nous pouvons intervenir sur vos installations de manière régulière afin d'éviter tout type d'incident !</p>
+                            <a class="text-secondary border-bottom" href="{% url 'service' %}">Lire plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="d-flex bg-light py-5 px-4">
+                        <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Installation</h5>
+                            <p>Nous proposons l'installation de tous types de voiture.</p>
+                            <a class="text-secondary border-bottom" href="{% url 'service' %}">Lire plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="d-flex py-5 px-4">
+                        <i class="fa fa-tools fa-3x text-primary flex-shrink-0"></i>
+                        <div class="ps-4">
+                            <h5 class="mb-3">Dépannage</h5>
+                            <p>Nos équipes se déplacent rapidement pour intervenir sur votre urgence.</p>
+                            <a class="text-secondary border-bottom" href="{% url 'demande' %}">Lire plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 pt-4" style="min-height: 400px;">
+                    <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/KhadimoulMoustaphaTouré.jpg' %}" style="object-fit: cover;" alt="">
+                        <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5" style="background: rgba(0, 0, 0, .08);">
+                            <h1 class="display-4 text-white mb-0">02<span class="fs-4">ans</span></h1>
+                            <h4 class="text-white">Experience</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-primary text-uppercase">// À PROPOS DE NOUS //</h6>
+                    <h1 class="mb-4"><span class="text-primary">AidAuto </span> Est le meilleur endroit pour vos soins automobiles</h1>
+                    <p class="mb-4">Nous mettons tout en oeuvre pour vous mettre dans de bonne condtions. Appelez-nous ! Prévenir plutôt que guérir ! Nous nous déplaçons toujours dans les meilleurs délais !</p>
+                    <div class="row g-4 mb-3 pb-3">
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">01</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>Professionnel & Expert</h6>
+                                    <span>Nos équipes sont composés de personnels expérimentés.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">02</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>Centre de service de qualité</h6>
+                                    <span>Nous proposons des services de qualités.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="d-flex">
+                                <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                    <span class="fw-bold text-secondary">03</span>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>Travailleurs primés</h6>
+                                    <span>Nous travaillons dans les meilleurs conditions possibles.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-3 px-5">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <div class="container-fluid fact bg-dark my-5 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-check fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">0002</h2>
+                    <p class="text-white mb-0">Years Experience</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">0015</h2>
+                    <p class="text-white mb-0">Expert Technicians</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-users fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">0004</h2>
+                    <p class="text-white mb-0">Satisfied Clients</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-car fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">0006</h2>
+                    <p class="text-white mb-0">Compleate Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl service py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase">// NOS SERVICES  //</h6>
+                <h1 class="mb-5"><b></b>Découvrez nos services</h1>
+            </div>
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4">
+                    <div class="nav w-100 nav-pills me-4">
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                            <i class="fa fa-car-side fa-2x me-3"></i>
+                            <h4 class="m-0">Test diagnostique</h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                            <i class="fa fa-car fa-2x me-3"></i>
+                            <h4 class="m-0">Entretien du moteur</h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                            <i class="fa fa-cog fa-2x me-3"></i>
+                            <h4 class="m-0">Remplacement des pneus</h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <i class="fa fa-oil-can fa-2x me-3"></i>
+                            <h4 class="m-0">
+                                Changement d'huile</h4>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content w-100">
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/service-1.jpg' %}"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3">Déjà 1 ans d'expérience dans l'entretien automobile</h3>
+                                    <p class="mb-4">Nous mettons tout en oeuvre pour vous mettre dans de bonne condtions. Appelez-nous ! Prévenir plutôt que guérir ! Nous nous déplaçons toujours dans les meilleurs délais !</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Service de qualité</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Travailleurs experts</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Équipement moderne</p>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 mt-3">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-2">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/service-2.jpg' %}"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3">Déjà 1 ans d'expérience dans l'entretien automobile</h3>
+                                    <p class="mb-4">Nous mettons tout en oeuvre pour vous mettre dans de bonne condtions. Appelez-nous ! Prévenir plutôt que guérir ! Nous nous déplaçons toujours dans les meilleurs délais !</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Service de qualité</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Travailleurs experts</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Équipement moderne</p>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 mt-3">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-3">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/service-3.jpg' %}"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3">Déjà 1 ans d'expérience dans l'entretien automobile</h3>
+                                    <p class="mb-4">Nous mettons tout en oeuvre pour vous mettre dans de bonne condtions. Appelez-nous ! Prévenir plutôt que guérir ! Nous nous déplaçons toujours dans les meilleurs délais !</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Service de qualité</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Travailleurs experts</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Équipement moderne</p>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 mt-3">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/service-4.jpg' %}"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3">Déjà 1 ans d'expérience dans l'entretien automobile</h3>
+                                    <p class="mb-4">Nous mettons tout en oeuvre pour vous mettre dans de bonne condtions. Appelez-nous ! Prévenir plutôt que guérir ! Nous nous déplaçons toujours dans les meilleurs délais !</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Service de qualité</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Travailleurs experts</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Équipement moderne</p>
+                                    <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5 mt-3">En savoir plus<i class="fa fa-arrow-right ms-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Booking Start -->
+    <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6 py-5">
+                    <div class="py-5">
+                        <h1 class="text-white mb-4">Fournisseur de services de réparation automobile certifié et primé</h1>
+                        <p class="text-white mb-0"> En tant que professionnel certifié, nous nous efforçons continuellement d 'offrir des services de réparation de la plus haute qualité, répondant aux normes les plus strictes de l'industrie. Nous remercions nos clients pour leur confiance et nous nous engageons à maintenir notre niveau d'excellence pour répondre à leurs besoins en matière de réparation voiture.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+                        <h1 class="text-white mb-4">Réservation de tous vos services</h1>
+                        <a href="{% url 'booking' %}" class="btn btn-primary py-3 px-5 mt-3">Cliquez Ici<i class="fa fa-arrow-right ms-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase">// NOS TECHNICIENS //</h6>
+                <h1 class="mb-5">Nos techniciens experts</h1>
+            </div>
+            <div class="row g-4">
+                {% for mecanicien in mecanicien_list %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid" src="{{mecanicien.user_image.url}}" alt="">
+                                <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                                    <a class="btn btn-square mx-1" href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square mx-1" href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light text-center p-4">
+                                <h5 class="fw-bold mb-0">{{mecanicien.first_name}} {{mecanicien.last_name}}</h5>
+                                <small><strong>Profession : </strong>{{mecanicien.profession}}</small><br>
+                                <small><strong>Tél : </strong><a class="call" href="tel: num_tel">{{mecanicien.num_tel}}</a></small><br>
+                                <small><strong>Région : </strong>{{mecanicien.région}}</small>
+                            </div>
+                        </div>
+                    </div>
+                 {% endfor %}
+                </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase">// TÉMOIGNAGE //</h6>
+                <h1 class="mb-5">Nos clients disent !</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{% static 'img/chauf-2.jpeg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Lamine Fall</h5>
+                    <p>Conducteur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Merci pour le dépannage, je suis ravis de vous.Je me sens tellement soulagé maintenant que la voiture est réparée et que je suis en sécurité.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{% static 'img/chauf-3.jpeg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Issa Diallo</h5>
+                    <p>Ingénieur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0"> Ce dépannage a vraiment renforcé ma confiance dans ce service. Je sais maintenant à qui faire appel si j'ai besoin d'aide à l'avenir.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{% static 'img/chauf-1.jpeg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Massaer Ndoye</h5>
+                    <p>Conducteur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Je tiens à exprimer toute ma gratitude envers l'équipe de dépannage. Leur professionnalisme et leur efficacité ont été impressionnants.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="{% static 'img/chauf-4.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Fatou Diallo</h5>
+                    <p>Directrice</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Je dois avouer que j'étais un peu frustrée par le temps que cela a pris pour le dépannage. Mais je suis content(e) que ce soit enfin réglé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+{% endblock body %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block body %}
+
+{%load static%}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../static/img/carousel-1.png);">
+        <div class="container-fluid page-header-inner py-5">
+            <div class="container text-center">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Register</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a class="mod" href="{% url 'accueil' %}">Home</a></li>
+                        <li class="breadcrumb-item"><a class="mod" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Register</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase">// S'inscrire //</h6>
+                <h1 class="mb-5">veuillez vous inscrire!</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- <section> begin ============================-->
+        <section class="text-center py-0">
+          <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../static/img/img-17.jpg);">
+            <div class="container">
+              <div class="row min-vh-100 align-items-center">
+                <div class="col-md-9 col-lg-6 mx-auto" data-zanim-timeline="{}">
+                  <div class="mb-5" data-zanim-xs="{&quot;delay&quot;:0,&quot;duration&quot;:1}" style="transform: translate(0px, 0px); opacity: 1;"><a href=""><img style="width: 120px; height: 140px;" src="../static/img/aid.png"></a>
+                    <div class="card" data-zanim-xs="{&quot;delay&quot;:0.1,&quot;duration&quot;:1}" style="transform: translate(0px, 0px); opacity: 1;">
+                    <div class="card-body p-md-5">
+                      <h4 class="text-uppercase fs-0 fs-md-1">create your AidAuto account</h4>
+                      <form action="#" method="post" enctype="multipart/form-data" class="text-start mt-4">
+                        
+                        {% csrf_token %}
+
+                        <div class="row align-items-center g-4">
+                          <div class="col-6"> 
+                            <div class="input-group">
+                              <div class="input-group-text bg-100">
+                                <span class="far fa-user"></span>
+                              </div>
+                              {% render_field form.first_name type="text" class="form-control" placeholder="First name" aria-label="First Name" %}
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="input-group">
+                              <div class="input-group-text bg-100">
+                                <span class="far fa-user"></span>
+                              </div>
+                              {% render_field form.last_name type="text" class="form-control" placeholder="Last name" aria-label="Last name" %}
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="input-group">
+                              <div class="input-group-text bg-100">
+                                <i class="far fa-envelope"></i>
+                              </div>
+                              {% render_field form.email type="email" class="form-control" placeholder="Email Address" aria-label="Email Address" %}
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="input-group">
+                              <div class="input-group-text bg-100">
+                                <span class="fas fa-lock"></span>
+                              </div>
+                              {% render_field form.password type="Password" class="form-control" placeholder="Password" aria-label="Password" %}
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="input-group">
+                              <div class="input-group-text bg-100">
+                                <span class="fas fa-lock"></span>
+                              </div>
+                              {% render_field form.confirm_password type="Password" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password" %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row align-items-center mt-3">
+                          <div class="col-6 mt-3">
+                            <div class="form-check"><input class="form-check-input" id="rememberMe" type="checkbox" value=""><label class="form-check-label text-500 lh-sm fw-semi-bold" for="rememberMe">I agree with the terms &amp; conditions</label></div>
+                          </div>
+                          <div class="col-6 mt-2 mt-sm-3"><button class="btn btn-primary w-100" type="submit">Create Account</button></div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          </section><!-- <section> close ============================-->
+          <!-- ============================================-->
+        
+    {% endblock body %}
